@@ -24,17 +24,6 @@ Placeholders that must stay in `config.plist`:
 | `SystemUUID` | `00000000-0000-0000-0000-000000000000` |
 | `ROM` | `000000000000` (Data, 6 zero bytes) |
 
-## 2. Apple files: user-supplied only
-
-Do **not** download Apple kexts, drivers or bundles from third-party mirrors,
-and do not add them to git. If the install needs them:
-
-1. Tell the user which files are missing and why (see `docs/WIFI.md`,
-   `docs/GPU.md`, `docs/INSTALL.md`).
-2. Ask the user to provide them **locally** from their own system or the
-   official WhateverXe Graphics / AirPort_RTW88 / OpenCore instructions.
-3. Apply them only to the user's local ESP copy, never to this repo.
-
 `AirPort_RTW88.kext` is in the repo but its `Kernel > Add` entry stays
 **disabled** until the user adds the Apple legacy stack locally.
 
