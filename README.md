@@ -1,6 +1,6 @@
-# MacBookPro16,2-style Tiger Lake Hackintosh EFI
+# HP 240 G8 EFI
 
-OpenCore EFI for a **Tiger Lake** laptop running **macOS Sequoia 15.8.1**.
+OpenCore EFI for the **HP 240 G8** laptop running **macOS Sequoia 15.8.1**.
 Tested on an **HP 240 G8** with Intel Core **i3-1115G4**, Intel UHD Graphics
 **0x9A78**, Realtek **RTL8822CE** Wi-Fi and an **ADATA LEGEND 710 256 GB** NVMe.
 
