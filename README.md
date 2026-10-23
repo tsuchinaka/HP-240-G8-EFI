@@ -1,8 +1,12 @@
 # MacBookPro16,2-style Tiger Lake Hackintosh EFI
 
 OpenCore EFI for a **Tiger Lake** laptop running **macOS Sequoia 15.8.1**.
-Tested on an Intel Core **i3-1115G4** with Intel UHD Graphics **0x9A78** and a
-Realtek **RTL8822CE** Wi-Fi card.
+Tested on an **HP 240 G8** with Intel Core **i3-1115G4**, Intel UHD Graphics
+**0x9A78**, Realtek **RTL8822CE** Wi-Fi and an **ADATA LEGEND 710 256 GB** NVMe.
+
+> Tested only on this exact machine. Other laptops, other NVMe drives, other
+> Wi-Fi cards or other BIOS versions may need different SSDT, USB map, audio
+> layout or DVMT settings.
 
 > This is a community EFI, not an Apple or Realtek product. Use it at your own
 > risk, keep a bootable backup, and never publish your real SMBIOS identifiers.
@@ -11,10 +15,11 @@ Realtek **RTL8822CE** Wi-Fi card.
 
 | Component | Model |
 | --- | --- |
+| Laptop | HP 240 G8 |
 | CPU | Intel Core i3-1115G4 (Tiger Lake, 2C/4T) |
 | iGPU | Intel UHD Graphics, device ID `0x9A78` |
-| RAM | 16 GB |
-| Storage | 256 GB NVMe |
+| RAM | 16 GB (2x 8 GB DDR4 2667 MHz) |
+| Storage | ADATA LEGEND 710 256 GB NVMe (only drive tested; others untested) |
 | Display | 1366x768 eDP |
 | Wi-Fi | Realtek RTL8822CE (`10EC:C822`, `10EC:C82F`) |
 | Ethernet | Realtek RTL8111/8168H |

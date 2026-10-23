@@ -4,10 +4,11 @@
 
 | Component | Detail |
 | --- | --- |
+| Laptop | HP 240 G8 (only machine tested) |
 | CPU | Intel Core i3-1115G4 (Tiger Lake, 2 cores / 4 threads, 3.00 GHz) |
 | iGPU | Intel UHD Graphics, device ID `0x9A78`, 1536 MB dynamic VRAM, Metal 2 |
-| RAM | 16 GB |
-| Storage | 256 GB NVMe |
+| RAM | 16 GB (2x 8 GB DDR4 2667 MHz) |
+| Storage | ADATA LEGEND 710 256 GB NVMe, `Revision VC0S036P` (only drive tested; other NVMe models untested and may behave differently) |
 | Display | 1366x768 eDP |
 | Wi-Fi | Realtek RTL8822CE, `10EC:C822` / `10EC:C82F` |
 | Ethernet | Realtek RTL8111/8168H, `10EC:8168` |
