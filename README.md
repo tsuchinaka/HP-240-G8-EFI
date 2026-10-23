@@ -53,16 +53,18 @@ Tested on an **HP 240 G8** with Intel Core **i3-1115G4**, Intel UHD Graphics
 - Internal 1366x768 eDP display and brightness (`SSDT-PNLF`)
 - Ethernet (RTL8111)
 - Audio (AppleALC, `alcid=55`)
-- Battery, keyboard and trackpad
-- Bluetooth (after the standard Realtek Bluetooth stack)
+- Battery, keyboard, **trackpad (VoodooI2C, working)** and audio
+- **Bluetooth (working)** via BlueToolFixup + RealtekBluetoothFirmware
 - Wi-Fi **after** adding the Apple legacy IO80211 stack (see `docs/WIFI.md`)
 
 **Known issues**
 
 - Wi-Fi can disconnect after a while: the AP sends a deauthentication
   (`reason 6`). Test a WPA2-only network and disable WPA3/PMF/802.11r first.
-- GPU power-well panic: `PG2 power well fuse distribution failed` in
-  `AppleIntelPowerWell`. Not a DVMT/stolen-memory issue. See `docs/GPU.md`.
+  This is the main open issue on the tested machine.
+- One GPU power-well panic observed (`PG2 power well fuse distribution
+  failed`, see `docs/GPU.md`). Not reproduced as a recurring failure; kept
+  documented so users can report it.
 - Sleep/wake is not fully validated.
 - AWDL, AirDrop and Continuity are not supported by AirPort_RTW88.
 - iServices require **your own** generated SMBIOS (see below).
