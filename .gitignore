@@ -1,0 +1,7 @@
+.DS_Store
+._*
+*.bak
+*.img
+*.dmg
+vault.plist
+opencore-*.txt
