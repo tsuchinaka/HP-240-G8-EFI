@@ -4,7 +4,7 @@
 
 | Component | Version | Location |
 | --- | --- | --- |
-| WhateverXe | 0.4.0 (`org.b00t0x.WhateverXe`) | `EFI/OC/Kexts` |
+| WhateverXe | 0.6.0 RELEASE (`org.b00t0x.WhateverXe`) | `EFI/OC/Kexts` |
 | AppleIntelTGLCompat | 0.5.0 (`org.b00t0x.AppleIntelTGLCompat`) | `/Library/Extensions` |
 | AppleIntelTGLGraphics | 16.0.0 | `/Library/Extensions` |
 | AppleIntelTGLGraphicsFramebuffer | 16.0.0 | `/Library/Extensions` |
@@ -15,6 +15,10 @@ WhateverXe is a Lilu plugin derived from WhateverGreen. It adapts Apple's
 Tiger Lake graphics drivers for the Intel Xe-LP iGPU. It is **not** a complete
 standalone driver: the Apple TGL kexts and Metal/GL/VA bundles must come from
 the signed WhateverXe Graphics package.
+
+On the tested machine the installed receipts are
+`org.b00t0x.WhateverXe.Sequoia` and `org.b00t0x.WhateverXe.Common`, both
+version **0.2.0**. Graphics 0.3.x is not installed.
 
 ## Install the graphics package
 

@@ -53,7 +53,7 @@ The iGPU uses `AAPL,ig-platform-id = 0x9A490000` (`0000499a` as Data).
 | VoodooPS2Controller | 2.3.7 |
 | RealtekRTL8111 | 2.4.2 |
 | AMFIPass | 1.4.1 |
-| WhateverXe | 0.4.0 |
+| WhateverXe | 0.6.0 |
 | AirPort_RTW88 | 2.0.1 |
 
 ## Notes

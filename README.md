@@ -41,33 +41,38 @@ Tested on an **HP 240 G8** with Intel Core **i3-1115G4**, Intel UHD Graphics
 | VoodooI2C / VoodooI2CHID | 2.9.1 / 1.0 |
 | VoodooPS2Controller | 2.3.7 |
 | RealtekRTL8111 | 2.4.2 |
-| AMFIPass | 1.4.1 |
-| WhateverXe | 0.4.0 |
+| AMFIPass | 1.4.1 Mod |
+| WhateverXe | 0.6.0 RELEASE |
+| WhateverXe Graphics | 0.2.0 (Sequoia + Common receipts) |
+| AppleIntelTGLCompat | 0.5.0 |
 | AirPort_RTW88 | 2.0.1 |
 
 ## Status
 
+Checked on the booted machine, Sequoia 15.8.1, 2026-10-27.
+
 **Working**
 
-- Metal 2 / OpenGL acceleration, 1536 MB dynamic VRAM
-- Internal 1366x768 eDP display and brightness (`SSDT-PNLF`)
-- Ethernet (RTL8111)
-- Audio (AppleALC, `alcid=55`)
-- Battery, keyboard, **trackpad (VoodooI2C, working)** and audio
-- **Bluetooth (working)** via BlueToolFixup + RealtekBluetoothFirmware
-- Wi-Fi **after** adding the Apple legacy IO80211 stack (see `docs/WIFI.md`)
+- Metal 2 acceleration on the internal 1366x768 eDP panel, 1536 MB dynamic VRAM, 30-bit framebuffer. Brightness through `SSDT-PNLF`.
+- Audio through Apple's `AppleHDA` 600.2 plus AppleALC `alcid=55`: internal speakers and the internal microphone are the default devices.
+- Wi-Fi connects with AirPort_RTW88 2.0.1 after the Apple legacy IO80211 stack is added locally (see `docs/WIFI.md`).
+- Keyboard (VoodooPS2) and trackpad (VoodooI2C).
+- Ethernet kext (RTL8111 2.4.2) loads. A cable was not retested on this pass.
+- Battery reporting (SMCBatteryManager).
 
-**Known issues**
+**Not working, or not confirmed**
 
-- Wi-Fi can disconnect after a while: the AP sends a deauthentication
-  (`reason 6`). Test a WPA2-only network and disable WPA3/PMF/802.11r first.
-  This is the main open issue on the tested machine.
-- One GPU power-well panic observed (`PG2 power well fuse distribution
-  failed`, see `docs/GPU.md`). Not reproduced as a recurring failure; kept
-  documented so users can report it.
-- Sleep/wake is not fully validated.
+- WindowServer can still crash while scaling a detached IOSurface. The fault is a NULL write in `AppleIntelTGLGraphicsVADriver` at image offset `0x1336f3` (`+0x910`). WhateverXe 0.6.0 does not fix it.
+- App Store video can freeze the GPU. This remains an upstream WhateverXe known issue.
+- Bluetooth kexts load, but on this boot the controller radio was off and no devices were connected. Do not treat Bluetooth as confirmed.
+- Sleep/wake is not validated.
 - AWDL, AirDrop and Continuity are not supported by AirPort_RTW88.
-- iServices require **your own** generated SMBIOS (see below).
+- Wi-Fi can still drop: the AP deauthenticates with `reason 6`. Try WPA2-only and disable WPA3/PMF/802.11r before blaming the kext.
+- Tahoe is not installed on this disk. Do not upgrade this volume in place. The installed graphics package is the Sequoia payload, and `CoreMedia / AllowOnePassMetalScaling` is not set.
+
+**On the running ESP, not in this repository**
+
+The booted `config.plist` also enables `IOSkywalkFamily`, `IO80211FamilyLegacy`, `AirPortBrcmNIC` and `HfsPlus.efi`. `SimpleHDA` 1.0.0 is enabled with `MinKernel` 25, so it does not load on Sequoia. `USBPorts.kext` is present and disabled. Those Apple binaries and SimpleHDA are not published here; the committed config leaves those entries disabled so a clone can boot without them.
 
 ## What is **not** included (and why)
 

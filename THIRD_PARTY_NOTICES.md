@@ -22,7 +22,7 @@ their own licenses. The license texts collected here are in `LICENSES/`.
 | RealtekRTL8111 | 2.4.2 | See upstream | https://github.com/Mieze/RTL8111_driver_for_OS_X |
 | RealtekBluetoothFirmware | 1.0.2 | See upstream | https://github.com/thegwchr/RealtekBluetoothFirmware |
 | AMFIPass | 1.4.1 | See upstream | https://github.com/kaoskinkae/AMFIPass |
-| WhateverXe | 0.4.0 | BSD-3-Clause | https://github.com/b00t0x/WhateverXe |
+| WhateverXe | 0.6.0 | BSD-3-Clause | https://github.com/b00t0x/WhateverXe |
 | AirPort_RTW88 | 2.0.1 | Realtek AirPort Family Project License 1.0 | https://github.com/xnoah222/Realtek-AirPort-Family |
 | Realtek rtlwifi firmware | — | Realtek firmware license | https://github.com/xnoah222/Realtek-AirPort-Family |
 

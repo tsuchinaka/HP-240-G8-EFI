@@ -555,7 +555,7 @@
 				<key>BundlePath</key>
 				<string>WhateverXe.kext</string>
 				<key>Comment</key>
-				<string>WhateverXe 0.4.0 RELEASE official. Loads after Lilu. Do not enable WhateverGreen.</string>
+				<string>WhateverXe 0.6.0 RELEASE official. Loads after Lilu. Do not enable WhateverGreen.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1736,7 +1736,7 @@
 				AAAAAAAAAAAAAAAAAAA=
 				</data>
 				<key>boot-args</key>
-				<string>-v keepsyms=1 -allow3d -disablegfxfirmware debug=0x100 -no_compat_check liludump=60 alcid=55 -vi2c-force-polling -btlfxallowanyaddr</string>
+				<string>-v keepsyms=1 -allow3d -disablegfxfirmware debug=0x100 liludump=60 alcid=55 -vi2c-force-polling -btlfxallowanyaddr</string>
 				<key>csr-active-config</key>
 				<data>
 				AwgAAA==
